@@ -19,6 +19,7 @@
     macros {
         vcc: vcc {
             compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
             bindings = <&ext_power EP_TOG &rgb_ug RGB_ON>;
         };
     };
