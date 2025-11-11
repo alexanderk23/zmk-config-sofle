@@ -20,7 +20,8 @@
         vcc: vcc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&ext_power EP_TOG &rgb_ug RGB_ON>;
+            // bindings = <&ext_power EP_TOG &rgb_ug RGB_ON>;
+            bindings = <&rgb_ug RGB_TOG>;
         };
     };
 
