@@ -12,5 +12,6 @@ manifest:
     - name: zmk
       remote: zmkfirmware_custom
       import: app/west.yml
+      revision: fix-sensor-rotate-behavior
   self:
     path: config
