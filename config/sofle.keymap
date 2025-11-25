@@ -45,7 +45,7 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             hold-trigger-on-release;
-        );
+        };
         
         /* Right-hand HRMs. */
         hmr: homerow_mods_right {
@@ -57,7 +57,7 @@
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             hold-trigger-on-release;
-        );
+        };
 
         rgb_bri: rgb_bri {
             compatible = "zmk,behavior-sensor-rotate";
