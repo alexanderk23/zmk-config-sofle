@@ -6,12 +6,15 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: zmkfirmware_custom
       url-base: https://github.com/alexanderk23
-    # Additional modules containing boards/shields/custom code can be listed here as well
-    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk
       remote: zmkfirmware_custom
       import: app/west.yml
       revision: fix-sensor-rotate-behavior
+    - name: zmk-helpers
+      remote: urob
+      revision: main
   self:
     path: config
