@@ -1,8 +1,9 @@
 #include <dt-bindings/led/led.h>
 
+/delete-node/ &led_strip;
+
 &spi3 {
 	status = "disabled";
-	/delete-node/ led_strip;
 };
 
 &pinctrl {
