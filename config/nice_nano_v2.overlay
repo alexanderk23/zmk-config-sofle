@@ -1,10 +1,22 @@
 #include <dt-bindings/led/led.h>
 
-/delete-node/ &led_strip;
+&left_encoder {
+    a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+};
+
+&right_encoder {
+    a-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+};
+
 
 &spi3 {
-	status = "disabled";
+    status = "disabled";
 };
+
+/delete-node/ &led_strip;
+
 
 &pinctrl {
 	spi2_default: spi2_default {
@@ -33,7 +45,7 @@
 	pinctrl-1 = <&spi2_sleep>;
 	pinctrl-names = "default", "sleep";
 
-	led_strip_spi2: ws2812@0 {
+	led_strip: ws2812@0 {
 		compatible = "worldsemi,ws2812-spi";
 		label = "WS2812";
 
@@ -50,7 +62,7 @@
 };
 
 / {
-	chosen {
-		zmk,underglow = &led_strip_spi2;
-	};
+    chosen {
+        zmk,underglow = &led_strip;
+    };
 };
