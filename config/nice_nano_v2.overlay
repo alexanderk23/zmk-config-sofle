@@ -4,9 +4,6 @@
     status = "disabled";
 };
 
-/delete-node/ &led_strip;
-
-
 &pinctrl {
 	spi2_default: spi2_default {
 		group1 {
