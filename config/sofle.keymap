@@ -125,7 +125,7 @@
                         &kp LCTRL    &kp LALT      &kp LGUI      &mo LOWER  &kp RET       &kp SPACE  &mo RAISE  &kp RGUI      &kp RALT      &kp RCTRL
             >;
 
-            sensor-bindings = <&vol &scroll_x>;
+            sensor-bindings = <&vol &scroll_y>;
         };
 
         lower_layer {
