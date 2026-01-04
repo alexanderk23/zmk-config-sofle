@@ -83,6 +83,14 @@
 
             tap-ms = <20>;
         };
+
+        scroll_x: scroll_x {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc MOVE_LEFT>, <&msc MOVE_RIGHT>;
+
+            tap-ms = <20>;
+        };
     };
 
     // Activate ADJUST layer by pressing raise and lower
@@ -117,7 +125,7 @@
                         &kp LCTRL    &kp LALT      &kp LGUI      &mo LOWER  &kp RET       &kp SPACE  &mo RAISE  &kp RGUI      &kp RALT      &kp RCTRL
             >;
 
-            sensor-bindings = <&vol &scroll_y>;
+            sensor-bindings = <&vol &scroll_x>;
         };
 
         lower_layer {
